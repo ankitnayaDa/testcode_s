@@ -19,5 +19,4 @@ func Test_Delete_Cat_Admin_user_test(t *testing.T){
     fmt.Printf("\n Delete Cats from inventory ")
     assert.Nil(t, Admin_user.DeleteCatsAndCheck("Dups"), "\nFailed to delete Cat")
 
-
 }
