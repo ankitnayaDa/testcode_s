@@ -90,21 +90,3 @@ func (s *Session)Login()error{
 	s.Token=loginResponse.Token
 	return nil
 }
-
-func (s *Session)ListCats()error{
-	URL:=types.ListKittyAPI
-	rawResponse, err := RestClient(URL, s.Token, "GET", "")
-	if err != nil {
-		fmt.Print("\nError while listing cats ...")
-		fmt.Print("\nResponse:", rawResponse)
-		return err
-	}
-	var Response types.ListKittyResponse
-	err = json.Unmarshal([]byte(rawResponse), &Response)
-	if err != nil {
-		fmt.Print("\nError while unmarshaling ...")
-		return err
-	}
-	PrettyStruct(Response)
-	return nil
-}

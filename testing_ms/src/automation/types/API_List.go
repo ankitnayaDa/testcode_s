@@ -9,3 +9,12 @@ type ListKittyResponse []struct {
 	PictureURL string `json:"pictureUrl"`
 }
 
+type CatRank struct {
+	Name       string `json:"name"`
+	Rank         int   `json:"Rank"`
+	Awesomeness  int   `json:"Awesomeness"`
+}
+
+type CatNewName struct {
+	NewName string `json:"newName"`
+}
